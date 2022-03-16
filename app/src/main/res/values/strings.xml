@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">TwoActivitiesLifecycle</string>
+    <string name="app_name">CounterHomework</string>
+    <string name="count">count</string>
 </resources>
