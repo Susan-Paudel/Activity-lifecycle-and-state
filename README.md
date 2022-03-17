@@ -5,7 +5,7 @@
 
 ### Landing Page UI
 
-![Landing Page](ScreenshotAndRecord/firstUI.png);
+![Landing Page](ScreenshotAndRecord/firstUI.png)
 
 **This above screenshot show the ten hidden textView and one button i.e. check shop** 
 
