@@ -17,7 +17,7 @@
 
 ## Vertical view of App
 
-![vertical view](ScreenshotAndRecord/vertical.png)
+![vertical view](ScreenshotAndRecord/Vertical.png)
 
 **The above screenshot show the vertical view of app with save the data**
 
