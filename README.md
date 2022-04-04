@@ -25,5 +25,7 @@
 
 ![Record](ScreenshotAndRecord/Record.gif)
 
-**above record show the overall functionality of application**
+**Above record show the overall functionality of application.The UI consist of two pages i.e. two activities, 
+first page consist of 10 text view and one button and second page consist of 10 button with each product exist in shop.
+if we select the product from second page the product will display on the first page.**
 
