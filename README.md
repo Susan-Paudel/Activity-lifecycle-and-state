@@ -25,4 +25,6 @@
 
 ![Record](ScreenshotAndRecord/Record.gif)
 
-**Above screenshot show the working functionality of Application**
+**Above screenshot show the working functionality of Application. The UI consist of button,textview and edittext.
+Button help to increase the counter value in textview and Edittext where we store the message. After the screen is
+rotate the value or data are save without loosing it.**
