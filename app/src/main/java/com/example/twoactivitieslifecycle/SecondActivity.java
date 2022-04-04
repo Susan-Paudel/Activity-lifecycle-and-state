@@ -1,5 +1,5 @@
 package com.example.twoactivitieslifecycle;
-
+//import require library
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -74,33 +74,62 @@ public class SecondActivity extends AppCompatActivity {
         finish();
     }
 
+    /**
+     * An interruptive event occurs,
+     * the activity enters the Paused state, and the system invokes the onPause() callback.
+     */
     @Override
     protected void onPause() {
+        //super reference variable that is used to refer parent class objects
         super.onPause();
+        //print in logcat if the function is called
         Log.d(LOG_TAG, "onPause");
     }
 
+    /**
+     * Called after your activity has been stopped, prior to it being started again.
+     * Always followed by onStart()
+     */
     @Override
     protected void onRestart() {
+        //super reference variable that is used to refer parent class objects
         super.onRestart();
+        //print in logcat if the function is called
         Log.d(LOG_TAG, "onRestart");
     }
 
+    /**
+     * activity enters the Resumed state, it comes to the foreground,
+     * and then the system invokes the onResume() callback
+     */
     @Override
     protected void onResume() {
+        //super reference variable that is used to refer parent class objects
         super.onResume();
+        //print in logcat if the function is called
         Log.d(LOG_TAG, "onResume");
     }
 
+    /**
+     * activity is no longer visible to the user, it has entered the Stopped state,
+     * and the system invokes the onStop() callback
+     */
     @Override
     protected void onStop() {
+        //super reference variable that is used to refer parent class objects
         super.onStop();
+        //print in logcat if the function is called
         Log.d(LOG_TAG, "onStop");
     }
 
+    /**
+     * onDestroy() is called before the activity is destroyed
+     */
     @Override
     protected void onDestroy() {
+        //super reference variable that is used to refer parent class objects
         super.onDestroy();
+        //print in logcat if the function is called
         Log.d(LOG_TAG, "onDestroy");
     }
 }

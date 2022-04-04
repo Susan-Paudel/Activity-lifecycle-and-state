@@ -1,5 +1,5 @@
 package com.example.twoactivitieslifecycle;
-
+//import required library
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
+//MainActivity extends the property of AppCompatActivity
 public class MainActivity extends AppCompatActivity {
 
     // Class name for Log tag
@@ -25,20 +25,28 @@ public class MainActivity extends AppCompatActivity {
     // TextView for the reply body
     private TextView mReplyTextView;
 
+    /**
+     * the activity enters the Started state, the system invokes this callback
+     *  onStart() call makes the activity visible to the user
+     */
     @Override
     protected void onStart() {
+        //super reference variable that is used to refer parent class objects
         super.onStart();
+        //print in logcat if the function is called
         Log.d(LOG_TAG, "onStart");
     }
 
     /**
      * Maintains the Activity state across configuration changes.
-     *
+     * invoked when the activity may be temporarily destroyed, save the instance state here
      * @param outState Activity state data to save
      */
     @Override
     public void onSaveInstanceState(Bundle outState) {
+        //super reference variable that is used to refer parent class objects
         super.onSaveInstanceState(outState);
+        //if reply msg is get from second page then textview will visible
         if (mReplyHeadTextView.getVisibility() == View.VISIBLE) {
             outState.putBoolean("reply_visible", true);
             outState.putString("reply_text", mReplyTextView.getText().toString());
@@ -52,7 +60,9 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //super reference variable that is used to refer parent class objects
         super.onCreate(savedInstanceState);
+        //take content from activity main xml
         setContentView(R.layout.activity_main);
 
         // Log the start of the onCreate() method.
@@ -87,10 +97,15 @@ public class MainActivity extends AppCompatActivity {
      * @param view The view (Button) that was clicked.
      */
     public void launchSecondActivity(View view) {
+        //button click
         Log.d(LOG_TAG, "Button clicked!");
+        //object intent
         Intent intent = new Intent(this, SecondActivity.class);
+        //message
         String message = mMessageEditText.getText().toString();
+        //set extra_message to message variable
         intent.putExtra(EXTRA_MESSAGE, message);
+        //locate to another page
         startActivityForResult(intent, TEXT_REQUEST);
     }
 
@@ -121,33 +136,62 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * An interruptive event occurs,
+     * the activity enters the Paused state, and the system invokes the onPause() callback.
+     */
     @Override
     protected void onPause() {
+        //super reference variable that is used to refer parent class objects
         super.onPause();
+        //print in logcat if the function is called
         Log.d(LOG_TAG, "onPause");
     }
 
+    /**
+     * Called after your activity has been stopped, prior to it being started again.
+     * Always followed by onStart()
+     */
     @Override
     protected void onRestart() {
+        //super reference variable that is used to refer parent class objects
         super.onRestart();
+        //print in logcat if the function is called
         Log.d(LOG_TAG, "onRestart");
     }
 
+    /**
+     * activity enters the Resumed state, it comes to the foreground,
+     * and then the system invokes the onResume() callback
+     */
     @Override
     protected void onResume() {
+        //super reference variable that is used to refer parent class objects
         super.onResume();
+        //print in logcat if the function is called
         Log.d(LOG_TAG, "onResume");
     }
 
+    /**
+     * activity is no longer visible to the user, it has entered the Stopped state,
+     * and the system invokes the onStop() callback
+     */
     @Override
     protected void onStop() {
+        //super reference variable that is used to refer parent class objects
         super.onStop();
+        //print in logcat if the function is called
         Log.d(LOG_TAG, "onStop");
     }
 
+    /**
+     * onDestroy() is called before the activity is destroyed
+     */
     @Override
     protected void onDestroy() {
+        //super reference variable that is used to refer parent class objects
         super.onDestroy();
+        //print in logcat if the function is called
         Log.d(LOG_TAG, "onDestroy");
     }
 }
