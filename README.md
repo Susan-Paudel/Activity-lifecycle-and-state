@@ -13,7 +13,7 @@
 
 ![btn Clicked](ScreenshotAndRecord/afterButtonIsclicked.png)
 
-**This above screenshot show the second page with ten product button when the shop button is clicked it will redirect to second Activity or page**
+**This above screenshot show the second page with ten product button when the shop button is clicked it will redirect to previous Activity or page**
 
 ### Item button is clicked
 
